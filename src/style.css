@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #111827;
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top left, rgba(99, 102, 241, .25), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(14, 165, 233, .22), transparent 35%),
+    #f3f4f6;
+}
+
+.card {
+  width: min(100%, 470px);
+  padding: 34px 22px 22px;
+  border: 1px solid rgba(255, 255, 255, .7);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, .82);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 60px rgba(15, 23, 42, .12);
+  align-self: flex-start;
+}
+
+.top {
+  text-align: center;
+}
+
+.avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, .16);
+}
+
+h1 {
+  margin: 15px 0 2px;
+  font-size: 27px;
+}
+
+.username {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.bio {
+  margin: 12px 0 24px;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link {
+  width: 100%;
+  min-height: 58px;
+  border: 0;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease;
+  background-color: #1877f2;
+  color: white;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, .12);
+}
+
+.fb {
+  background: #1877f2;
+  color: white;
+}
+
+.bank {
+  background: #111827;
+  color: white;
+}
+
+
+.bank-box {
+  padding: 18px;
+  border-radius: 20px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  animation: show .2s ease;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.label {
+  margin: 0 0 14px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #6b7280;
+  letter-spacing: .08em;
+}
+
+.bank-info {
+  display: grid;
+  gap: 10px;
+}
+
+.bank-info div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.bank-info span {
+  color: #6b7280;
+}
+
+.bank-info b {
+  text-align: right;
+}
+
+.qr {
+  display: block;
+  width: min(100%, 220px);
+  aspect-ratio: 1;
+  margin: 18px auto;
+  border-radius: 16px;
+  object-fit: cover;
+  background: white;
+}
+
+.copy-btn {
+  width: 100%;
+  height: 46px;
+  border: 0;
+  border-radius: 13px;
+  background: white;
+  color: #111827;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 24px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding: 15px 10px;
+  }
+
+  .card {
+    border-radius: 23px;
+    padding: 28px 16px 18px;
+  }
+}
